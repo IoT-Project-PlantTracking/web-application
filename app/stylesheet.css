@@ -1,0 +1,24 @@
+body {
+
+}
+
+#navigationbar {
+    
+}
+
+#burgermenu {
+    width: 35px;
+    height: 35px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#logoutBtn {
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+}
