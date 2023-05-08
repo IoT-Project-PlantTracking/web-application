@@ -1,24 +1,120 @@
-body {
-
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#navigationbar {
+a, button {
+    cursor: pointer;   
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logout {
+    position: fixed;
+    right: 2%;
+    top: 3%;
+    padding: 8px 10px;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bolder;
+    background: #f75050;
+    color: #fff;
+    border: 0px;
+    border-radius: 5px;
     
 }
 
-#burgermenu {
-    width: 35px;
-    height: 35px;
-    margin-left: 20px;
-    margin-top: 10px;
+nav {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 250px;
 }
 
-#logoutBtn {
-    float: right;
-    margin-right: 20px;
-    margin-top: 10px;
-    padding: 8px;
-    border-radius: 10px;
-    font-size: 17px;
-    font-weight: 700;
+.navigation {
+    position: fixed;
+    left: -500px;
+    width: 350px;
+    height: 100%;
+    background-color: #4aca00;
+    transition: .5s;
+}
+
+.navigation ul li {
+    color: #fff;
+    text-align: left;
+    text-transform: uppercase;
+    list-style: none;
+    font-size: 1.5em;
+    padding: 20px 30px;
+    border-bottom: 1px solid #252525;
+}
+
+.hamburger, #linje1, #linje2, #linje3 {
+    position: fixed;
+}
+
+.hamburger {
+    display: block;
+    top: 5%;
+    left:2%;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+}
+
+#linje1, #linje2, #linje3 {
+    top: 3px;
+    background: #000;
+    width: 100%;
+    height: 4px;
+    transition: all .3s ease-in;
+}
+
+#linje2 {
+    top: 11px;
+}
+
+#linje3 {
+    top: 19px;
+}
+
+.active {
+    left: 0px;
+}
+
+.hamburger.open #linje1{
+    background-color: #fff;
+    transform: rotate(45deg) translate(6px, 5px);
+}
+
+.hamburger.open #linje2{
+    background-color: transparent;
+}
+
+.hamburger.open #linje3{
+    background-color: #fff;
+    transform: rotate(-45deg) translate(6px, -5px);
+}
+
+.navigation.selected1 .option1 a {
+    color: #000;
+}
+
+.navigation.selected2 .option2 a {
+    color: #000;
+}
+
+.navigation.selected3 .option3 a {
+    color: #000;
+}
+
+.navigation.selected4 .option4 a {
+    color: #000;
 }
