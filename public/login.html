@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jakob, Emil og Frederik">
+    <link href="/public/stylesheet.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+  </head>
+  <body id="loginPage">  
+
+    <form action="/auth" method="post">
+      <div class="container" id="login">
+        <h1>Login</h1>
+        <label for="email"><b>E-mail</b></label>
+        <input type="text" placeholder="Enter E-mail" name="username" required>
+            
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+                    
+        <button class="loginBtn" type="submit">Login</button>
+                  
+        <span class="psw"><a href="#">Forgot password?</a></span>
+        <span class="create"><a href="signup.html">Create login</a></span>
+      </div>
+            
+                
+    </form>   
+  </body>
+</html>
