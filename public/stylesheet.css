@@ -207,3 +207,40 @@ span.create{
 }
 
 /* END OF STYLING FOR LOGIN PAGE */
+
+#scroll{
+    margin-top: 1%;
+}
+
+div.scrollmenu {
+  background-color: white;
+  overflow: auto;
+  margin-left: 10px;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 70px;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin: 10px;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+#add_remove{
+    padding-top: 65px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+#removeplant{
+    float: right;
+}
+hr{
+    margin-top: 1%;
+}
