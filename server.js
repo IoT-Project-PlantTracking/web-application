@@ -44,7 +44,7 @@ app.post('/auth', function(req, res) {
     let password = req.body.password;
     //looks through the database to check if the username and password exist, and then redirects or send message
     if(username && password) {
-        mysqlConnection.query('SELECT * FROM login WHERE username = ? AND password = ?', [username, password], function(error, result) {
+        mysqlConnection.query('SELECT * FROM user WHERE username = ? AND password = ?', [username, password], function(error, result) {
             if (error) {
                 throw error;
             } 
@@ -76,6 +76,45 @@ app.post('/logout', function(req, res) {
     res.redirect('/');
     res.end();
 });
+
+//When user is signing up this happens
+app.post('/register', function(req, res) {
+    let email = req.body.email;
+    let username = req.body.username;
+    let password = req.body.password;
+
+    if (email && username && password) {
+        mysqlConnection.query('INSERT INTO user (email, username, password) VALUES (?, ?, ?)', [email, username, password], function(error) {
+            if (error) {
+                throw error;
+            } else {
+                res.redirect('/');
+                res.end();
+            }
+        });
+    }
+});
+
+app.get('/allUserPlants', function(req, res) {
+    let userName = req.session.username;
+    mysqlConnection.query('SELECT id FROM user WHERE username = ?', [userName], function (error, result) {
+        if (error) {
+            throw error;
+        } else {
+            data = JSON.parse(JSON.stringify(result));
+            id = data[0].id
+            
+            mysqlConnection.query('SELECT * FROM plant WHERE userid = ?', [id], function(error, result) {
+                if (error) {
+                    throw error;
+                } else {
+                    res.json(result);
+                }
+            });
+        }
+    });
+});
+
 
 //The server listens on port 3000
 app.listen(3000);
