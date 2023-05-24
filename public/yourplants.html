@@ -8,8 +8,6 @@
         <link href="/public/stylesheet.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        
-
             <div class="navigation">
 
                 <button class="hamburger" onclick="show()"> 
@@ -20,10 +18,10 @@
         
                 <nav>
                     <ul>
-                        <li class="option1"><a href="plants.html">Your plants</a></li>
-                        <li class="option2"><a href="#">Edit plants</a></li>
-                        <li class="option3"><a href="#">Profile</a></li>
-                        <li class="option4"><a href="#">About us</a></li>
+                        <li class="option1"><a href="yourplants.html">Your plants</a></li>
+                        <li class="option2"><a href="editplants.html">Edit plants</a></li>
+                        <li class="option3"><a href="profile.html">Profile</a></li>
+                        <li class="option4"><a href="aboutus.html">About us</a></li>
                     </ul>
                 </nav>
         
@@ -32,12 +30,9 @@
                 </button>
         
             </div>
-        
-            <script src="/app/script.js"></script>
-
 
         <div class="scrollmenu" id="add_remove">
-            <a href="Add_plant.html">Add plant</a>
+            <a href="Add_plant.html" id="addplant">Add plant</a>
             <a href="removeplant.html" id="removeplant">Remove plant</a>
         </div>
 
@@ -47,5 +42,8 @@
 
         </ul>
         </div>
+       
+        <script src="/public/yourplants.js"></script>
+        <script src="/public/script.js"></script>
     </body>
 </html>
